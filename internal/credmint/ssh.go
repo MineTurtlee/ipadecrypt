@@ -230,7 +230,7 @@ func (d *sshDevice) setup() error {
 
 	d.ps = "ps"
 	if temporary != "" {
-		d.ps = "/rootfs/bin/ps"
+		d.ps = "/bin/ps"
 
 		if !strings.HasPrefix(temporary, "/") {
 			return errors.New("jbroot returned a non-absolute temporary directory")
